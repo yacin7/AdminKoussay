@@ -1,5 +1,5 @@
 // src/lib/api.ts
-const API_URL = "http://localhost:5000";
+const API_URL = "https://koussaybackend.onrender.com";
 
 export const api = {
   // === PRODUITS ===
