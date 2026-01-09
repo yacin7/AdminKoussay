@@ -68,6 +68,8 @@ export default function OrdersPage() {
                   <tr className="border-b">
                     <th className="text-left py-3">ID</th>
                     <th className="text-left py-3">Client</th>
+                    <th className="text-left py-3">Mail</th>
+                    <th className="text-left py-3">Telephone</th>
                     <th className="text-left py-3">Date</th>
                     <th className="text-left py-3">Total</th>
                     <th className="text-left py-3">Statut</th>
@@ -78,7 +80,9 @@ export default function OrdersPage() {
                   {orders.map((order: any) => (
                     <tr key={order._id} className="border-b hover:bg-muted/50">
                       <td className="py-4">#ORD-{order._id.slice(-6).toUpperCase()}</td>
-                      <td className="py-4">{order.userId || "Anonyme"}</td>
+                      <td className="py-4">{order.customerName || "Anonyme"}</td>
+                      <td className="py-4">{order.email || "Non renseigné"}</td>
+                      <td className="py-4">{order.phone || "Non renseigné"}</td>
                       <td className="py-4">{new Date(order.createdAt).toLocaleDateString("fr")}</td>
                       <td className="py-4 font-bold text-primary">{order.total} DT</td>
                       <td className="py-4">
