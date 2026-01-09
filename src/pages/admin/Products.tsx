@@ -262,7 +262,8 @@ export default function ProductsPage() {
 
       {/* === Dialog Ajouter === */}
       <Dialog open={isAddOpen} onOpenChange={setIsAddOpen}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+
           <DialogHeader>
             <DialogTitle>Ajouter un produit</DialogTitle>
           </DialogHeader>
@@ -339,7 +340,7 @@ export default function ProductsPage() {
 
       {/* === Dialog Modifier === */}
       <Dialog open={isEditOpen} onOpenChange={setIsEditOpen}>
-        <DialogContent className="max-w-2xl">
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>Modifier le produit</DialogTitle>
           </DialogHeader>
